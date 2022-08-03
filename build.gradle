@@ -1,0 +1,50 @@
+buildscript {
+    apply from: this.rootProject.file("config.gradle")
+
+}
+
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    sourceCompatibility = 17
+    targetCompatibility = 17
+
+    group 'cby.springcloud'
+    version "${projectVer}"
+
+    //配置仓库
+    repositories{
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    // 所有工程都使用lombok、打印日志
+    dependencies {
+        compileOnly lombok
+        annotationProcessor lombok
+        implementation log4j2_starter
+    }
+    jar.enabled=true
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${cloudHoxtonVer}"
+//            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${cloudAliVer}"
+        }
+    }
+
+    configurations {
+        // 排除spring自带的日志框架
+        all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}

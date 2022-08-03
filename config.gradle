@@ -1,0 +1,28 @@
+ext {
+    // 定义依赖版本号
+    springBootVersion = '2.4.2'
+    lombokVersion = '1.18.20'
+    log4j2Version = '2.7.2'
+    mybatisVersion = '2.1.4'
+    druidVersion = '1.2.11'
+    mysqlVersion = '8.0.29'
+    cloudAliVer = '2021.0.1.0'
+    cloudHoxtonVer = '2020.0.6'
+    hutoolVer = '5.3.7'
+    projectVer = '1.0-SNAPSHOT'
+
+
+    // spring cloud
+    cloud_hoxton = "org.springframework.cloud:spring-cloud-dependencies:${cloudAliVer}"
+    cloud_alibaba = "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${cloudAliVer}"
+    // 数据库
+    mysql_driver =
+
+    // SpringBoot
+    boot = "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+    // 日志
+    log4j2_starter = "org.springframework.boot:spring-boot-starter-log4j2:${log4j2Version}"
+    // lombok
+    lombok = "org.projectlombok:lombok:${lombokVersion}"
+    // 测试
+}

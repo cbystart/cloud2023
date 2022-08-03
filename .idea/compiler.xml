@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../../developSoft/apache-maven-3.5.4/repository/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
+        </processorPath>
+        <module name="cloud2023.cloud-api-commons.main" />
+        <module name="cloud2023.cloud-provider-payment8002.main" />
+        <module name="cloud2023.cloud-provider-payment8004.main" />
+        <module name="cloud2023.cloud-eureka-server7002.main" />
+        <module name="cloud2023.cloud-consumer-order80.main" />
+        <module name="cloud2023.cloud-eureka-server7001.main" />
+        <module name="cloud2023.cloud-consumerzk-order80.main" />
+        <module name="cloud2023.cloud-provider-payment8001.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+rootProject.name = 'cloud2023'
+include 'cloud-provider-payment8001'
+include 'cloud-consumer-order80'
+include 'cloud-api-commons'
+include 'cloud-eureka-server7001'
+include 'cloud-eureka-server7002'
+include 'cloud-provider-payment8002'
+include 'cloud-provider-payment8004'
+include 'cloud-consumerzk-order80'
+
